@@ -9,7 +9,7 @@ from random import sample, randrange
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
 from pygments.formatters import HtmlFormatter
-from settings import db, render, session
+from settings import db, render, setup_session
     
 urls = (
     '/', 'index',
