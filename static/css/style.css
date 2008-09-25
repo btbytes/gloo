@@ -1,0 +1,74 @@
+body{
+    margin:0px;
+    background:#cfc;
+}
+html, body {
+    height: 100%;
+}
+#doc2, #bd {
+    height: 94%;
+}
+
+#hd{
+    padding-top:1em;
+    margin-bottom:0em;
+}
+
+#hd p{color:#c60;}
+#main{
+    padding-left:3em;
+}
+#ft{}
+#abt{
+    color:#000;
+    font-size:1em;
+    text-transform:uppercase;
+    border-bottom: dotted 1px #ccc;
+    padding-bottom: 0.5em;
+    margin-bottom:1em;
+}
+ul#fieldlist li{
+    list-style:none inside;
+    margin-bottom:1.5em;
+}
+ul#options li{
+    display:inline;
+}
+#options label{
+    margin-left:1em;
+}
+label.desc{
+    
+    font-size:1.1em;
+    margin-bottom:0.5em;
+}
+
+p.instruct{
+   
+}
+#saveForm{
+    font-size:2em;
+    text-transform: bold;
+}
+#sidebar .se h3{
+    color:#c60;
+    font-weight:bold;
+    font-size:1.2em;
+    margin-bottom:0.5em;
+}
+#sidebar .se p{
+    color:#999;
+}
+#links{
+    margin-bottom:1em;
+}
+span.link{
+    color:#00f;
+    text-decoration:underline;
+}
+form#gloof textarea#source{
+    font-family:"Courier New", fixed;
+    font-size:1em;
+    color:#009;
+}
+#lsource{display:none;}

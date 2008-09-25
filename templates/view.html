@@ -1,0 +1,36 @@
+$def with (paste, n)
+
+<div id="pinfo">
+	<p>$:paste.title posted by $:paste.name on $:paste.created </p>
+</div>
+<div id="code">
+$:paste.html
+</div>
+
+$var title: Viewing 
+
+$var css:
+	<style type="text/css" media="screen">
+		#pinfo{
+			margin-bottom: 1em;
+		}
+		#pinfo p{
+			line-height:1.3em;
+			font-size:1.2em;
+		}
+		#code pre{
+			font-size:1.1em;
+		}
+		td.linenos pre{
+			margin-right:0.5em;
+		}
+		div.syntax{
+			margin-left:1em;
+			padding:0.5em;
+		}
+	</style>
+
+
+$var sidebar: <p id="abt">gloo holds your code together</p><div class="se"><h3><a href="/$:n/copy">Make a copy</a></h3></div>
+
+

@@ -1,0 +1,82 @@
+$def with (src, title, name)
+
+<!-- img id="bottom" src="/static/images/top.png" alt="" / -->
+
+<form id="gloof" class="pform topLabel" action="/"
+	autocomplete="off" enctype="multipart/form-data" method="post"
+	>
+<ul id="fieldlist">
+	<li id="fo7li0" >
+		<label id="lsource" class="desc" for="source">Source</label>
+
+		<div>
+			<textarea id="source" class="field textarea large"
+			name="source" rows="30" cols="79" tabindex="1" >$:src</textarea>
+		</div>
+
+		<p class="instruct " id="instruct0"><small>paste your code here</small></p>
+	</li>
+		<li class="buttons">
+			<input id="saveForm" class="btTxt" type="submit" tabindex="5" value="save"  />
+		</li>
+		<ul id="options">
+		<li id="fo7li1">
+			<label class="desc" id="ltitle" for="title" style="margin-left:0em;">title</label>
+				<input id="title" 	class="field text medium"	name="title" 	
+				tabindex="2"	type="text" 	maxlength="255" 	value="$:title" /> 
+			</li>
+
+		<li id="fo7li3">
+			<label class="desc" id="lname" for="name">name/<a href="#" onClick="hl('eml')">email</a></label>
+				<input id="name" class="field text medium"	name="name" tabindex="3" type="text" maxlength="255" value="$:name"/> 
+		</li>
+
+		<li class="   " id="fo7li4" >
+			<label class="desc" id="lsyntax" for="syntax">syntax</label>
+				<select class="field select medium" id="syntax" name="syntax" tabindex="4"  > 
+					<option value="" selected="selected">---------</option>
+					    <option value="Python">Python</option>
+					    <option value="PythonConsole">Python Interactive/Traceback</option>
+					    <option value="Sql">SQL</option>
+					    <option value="DjangoTemplate">Django Template/HTML</option>
+
+					    <option value="JScript">JavaScript</option>
+					    <option value="Css">CSS</option>
+					    <option value="Xml">XML</option>
+					    <option value="Diff">Diff</option>
+					    <option value="Ruby">Ruby</option>
+					    <option value="Rhtml">Ruby HTML (ERB)</option>
+
+					    <option value="Haskell">Haskell</option>
+					    <option value="Apache">Apache Config</option>
+					    <option value="Bash">Bash script</option>
+					    <option value="" selected="selected">Plain</option>				</select>
+		</li>
+		<li style="display:none">
+			<label for="comment">Do Not Fill This Out</label>
+			<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+		</li>
+	</ul><!-- #options -->
+</ul>
+<p>(optional)</p>
+
+</form>
+
+$var title: Paste it!
+
+$var sidebar:
+	<p id="abt">gloo holds your code together</p>
+	<p id="links">
+		<a href="#" onClick="hl('retrieve')">my pastes</a>
+	</p>
+	<div class="se" id="retrieve">
+		<p>Enter your email and get a list of all your earlier pastes</p>
+	<form action="index_submit" method="get" accept-charset="utf-8">
+	<p><input type="text" name="email" value="" id="email" />
+		<input type="submit" value="&rarr;"></p>
+	</form>
+	</div>
+	<div class="se" id="eml"><h3>Email</h3> 
+	<p class="note">
+	You can retrieve links to all your pastes by confirming your email address. No, I won't spam you.</p>
+	</div>

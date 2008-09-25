@@ -1,0 +1,40 @@
+$def with (page)
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>$page.title.strip() gloo</title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.5.1/build/grids/grids-min.css" type="text/css">
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.5.1/build/fonts/fonts-min.css" type="text/css">
+
+   <!-- <link rel="stylesheet" href="/static/css/dyn.css" type="text/css"> -->
+   <link rel="stylesheet" href="/static/css/style.css" type="text/css">	
+   <link rel="stylesheet" href="/static/css/pygments.css" type="text/css">	
+   <script type="text/javascript" src="/static/js/jquery.js"></script>
+   <script type="text/javascript" src="/static/js/smooth.js"></script>
+$if page.get('css'):
+    $:page.css
+$if page.get('js'):
+    $:page.js
+
+</head>
+<body>
+<div id="doc3" class="yui-t7" >
+   <div id="hd"></div>
+   <div id="bd">
+	<div class="yui-gc">
+		  <div class="yui-u first">
+			  <div id="main">$:page</div>
+		   </div>
+		  <div class="yui-u" id="sidebar">
+$if page.get('sidebar'):
+     $:page.sidebar	
+		   </div>
+	</div><!-- yui-gc -->
+
+	</div><!-- bd -->
+</div><!-- doc2 -->
+<div style="clear:both"></div>
+</body>
+</html>
